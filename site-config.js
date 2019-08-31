@@ -7,15 +7,15 @@ module.exports = {
   video_or_screenshot   : "screenshot",                                           // "screenshot" or "video"
   app_url               : "https://agalp.imedadel.me",                            // Domain of your website without path_prefix.
   path_prefix           : "/",                                                    // Prefixes all links. For cases when deployed to example.github.io/automatic-gatsbyjs-app-landing-page/.
-  app_name              : "AGALP",
+  app_name              : "ADU ROI",
   app_price             : "Free",
-  app_description       : "Automatically generate GatsbyJS app landing pages.",
-  app_keywords          : ["automatic", "gatsbyjs", "app", "landing page"],
+  app_description       : "Easily evaluate whether an ADU makes sense",
+  app_keywords          : ["ADU", "Accessory Dwelling Unit", "Cap Rate", "ROI"],
 
   // Personal Info
-  your_name              : "Imed Adel",
+  your_name              : "Rachel Olsen",
   your_link              : "https://imedadel.me",
-  your_city              : "Sousse",
+  your_city              : "San Diego",
   email_address          : "hello@imedadel.me",
   linkedin_username      : null,
   facebook_username      : null,
