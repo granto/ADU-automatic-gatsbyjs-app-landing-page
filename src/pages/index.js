@@ -131,10 +131,10 @@ const IndexPage = ({ data }) => (
                 className="appIconLarge"
               />
             </div>
-//            <div className="appNamePriceContainer">
-//              <h1 className="appName">{configs.app_name}</h1>
-//              <h2 className="appPrice">{configs.app_price}</h2>
-//            </div>
+            <div className="appNamePriceContainer">
+              <h1 className="appName">{configs.app_name}</h1>
+              <h2 className="appPrice">{configs.app_price}</h2>
+            </div>
             <div className="appDescriptionContainer">
               <p className="appDescription">{configs.app_description}</p>
             </div>
