@@ -1,0 +1,12 @@
+{
+  "withAdu": -1850,
+  "withoutAdu": -2400,
+  "impact": 550,
+  "bridge": {
+    "rent": 2500,
+    "vacancy": -125,
+    "operations": -425,
+    "loan": -1150,
+    "tax": -250
+  }
+}
