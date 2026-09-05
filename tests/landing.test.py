@@ -23,13 +23,20 @@ class Landing(unittest.TestCase):
             if href.startswith('#'): self.assertIn(href[1:],ids)
             if 'app.aduroi.com' in href: self.assertEqual(href,'https://app.aduroi.com/')
         self.assertNotRegex(self.html,r'imedadel|appstore|playstore|javascript:')
-    def test_current_and_forthcoming_are_unambiguous(self):
-        self.assertIn('Forthcoming experience',self.html)
-        self.assertIn('Open current app',self.html)
-        self.assertIn('not live yet',self.html)
+    def test_launch_copy_keeps_pricing_and_planning_boundaries(self):
+        self.assertIn('Start an evaluation',self.html)
+        self.assertNotRegex(self.html, r'(?i)current app|forthcoming|not live yet|before launch|coming with the redesign|planned construction|pending confirmation')
+        self.assertNotRegex((ROOT/'public/404.html').read_text(), r'(?i)current app|forthcoming')
         for amount in ['$19','$200','$350']: self.assertIn(amount,self.html)
         self.assertIn('confirm the price and terms',self.html)
-        self.assertNotIn('Start an evaluation',self.html)
+        self.assertIn('plan limits',self.html)
+        self.assertIn('not a contractor quote',self.html)
+    def test_founder_story_is_grant_singular(self):
+        story = self.html.split('id="story"')[1].split('id="pricing"')[0]
+        self.assertIn('Grant Olsen',story)
+        self.assertNotRegex(story, r'(?i)\b(founders|we|our|us|they|their|wife)\b')
+        self.assertIn('Southern California',story)
+        self.assertIn('garage conversion',story)
     def test_sample_is_honest_and_reconciles(self):
         self.assertIn('Illustrative example',self.html)
         self.assertIn('not a forecast',self.html)

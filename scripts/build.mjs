@@ -32,7 +32,7 @@ const head = `<meta charset="utf-8">
 <meta property="og:image" content="${config.url}social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ADUroi. Make the ADU decision clearer. Forthcoming experience.">
+<meta property="og:image:alt" content="ADUroi. Make the ADU decision clearer. Start an evaluation.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(config.title)}">
 <meta name="twitter:description" content="${esc(config.description)}">
@@ -61,7 +61,7 @@ await writeFile(
 )
 await writeFile(
   resolve(publicDir, "404.html"),
-  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found — ADUroi</title><meta name="robots" content="noindex, follow"><link rel="stylesheet" href="/site.css"></head><body><main class="wrap error-page"><p class="eyebrow">ADUroi / 404</p><h1>This page isn't here.</h1><p>Return to ADUroi to explore the current app and forthcoming experience.</p><a class="button primary" href="/">Back to ADUroi</a></main></body></html>`
+  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found — ADUroi</title><meta name="robots" content="noindex, follow"><link rel="stylesheet" href="/site.css"></head><body><main class="wrap error-page"><p class="eyebrow">ADUroi / 404</p><h1>This page isn't here.</h1><p>Return to ADUroi to start your ADU evaluation.</p><a class="button primary" href="/">Back to ADUroi</a></main></body></html>`
 )
 await writeFile(
   resolve(publicDir, "_headers"),
